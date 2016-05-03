@@ -1,57 +1,313 @@
+
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Showdemo by elmoy</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Showdemo</h1>
-      <h2 class="project-tagline">show demo</h2>
-      <a href="https://github.com/elmoy/showdemo" class="btn">View on GitHub</a>
-      <a href="https://github.com/elmoy/showdemo/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/elmoy/showdemo/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
 
-    <section class="main-content">
-      <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<html lang="zh-CN">
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
+<head>
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+<meta charset="utf-8">
+<!-- <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/> -->
+<title>Showdemo </title>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+<link rel="stylesheet" href="http://www.jq22.com/demo/fullpage-141201214949/css/jquery.fullPage.css">
+<script src="http://www.jq22.com/demo/fullpage-141201214949/js/jquery-1.8.3.min.js"></script>
 
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+<script src="http://www.jq22.com/demo/fullpage-141201214949/js/jquery-ui-1.10.3.min.js"></script>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<script src="http://www.jq22.com/demo/fullpage-141201214949/js/jquery.fullPage.min.js"></script>
+<script>
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+$(document).ready(function() {
 
-<p>You can <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#mentioning-users-and-teams" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+	$.fn.fullpage({
 
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+		slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
 
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+		anchors: ['page1', 'page2', 'page3']
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/elmoy/showdemo">Showdemo</a> is maintained by <a href="https://github.com/elmoy">elmoy</a>.</span>
+	});
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+});
 
-    </section>
+</script>
+<link rel="stylesheet" type="text/css" href="css/animation.css">
+<style>
 
-  
-  </body>
+.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff; overflow: hidden;}
+.halfwidth{
+	width: 50%;
+	float: left;
+	position: relative;
+}
+.logo{
+  position: relative;
+  width: 370px;  /*0.6166666666666667*/
+  height: 600px;
+}
+.logo img{
+  position: absolute;
+
+}
+.logo img:nth-child(1){
+  width: 100%;
+  top: 0;
+  left:0;
+  /*animation: move_top 5s ease;*/
+}
+/*@keyframes move_top{
+  0%{top:-100px;left:-100px;}
+  50%{top:0;left: -80px;}
+  80%{top: 0;left: 0;-webkit-transform: scaleZ(5) rotateX(45deg);}
+  100%{}
+}*/
+.logo img:nth-child(2){
+  width: 60%;
+  bottom: 0;
+  left:0;
+}
+.logo img:nth-child(3){
+  width: 36%;
+  bottom: 0;
+  right: 0;
+}
+.logo img:nth-child(4){
+  width: 21.6%;
+  bottom: 21.6%;
+  right: 0;
+}
+
+/*fire*/
+
+.velas {
+	/*background: #ffffff;*/
+	border-radius: 10px;
+	position: absolute;
+	top: 360px;
+	left: 81%;
+	/*margin-left: -2.5px;*/
+	/*margin-top: -8.33333333px;*/
+	width: 5px;
+	height: 35px;
+	/*-webkit-transform: translateY(-300px);
+	-ms-transform: translateY(-300px);
+	transform: translateY(-300px);*/
+	-webkit-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-animation: in 500ms ease-out forwards;
+	animation: in 500ms ease-out forwards;
+}
+
+/*.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.22222222px;
+}*/
+
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+.fuego {
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -2.2px;
+  width: 36.66666667px;
+  height: 118px;
+  z-index: 99;
+}
+
+.fuego:nth-child(1) {
+  -webkit-animation: fuego 2s infinite;
+  animation: fuego 2s infinite;
+}
+
+.fuego:nth-child(2) {
+  -webkit-animation: fuego 1.5s infinite;
+  animation: fuego 1.5s infinite;
+}
+
+.fuego:nth-child(3) {
+  -webkit-animation: fuego 1s infinite;
+  animation: fuego 1s infinite;
+}
+
+.fuego:nth-child(4) {
+  -webkit-animation: fuego 0.5s infinite;
+  animation: fuego 0.5s infinite;
+}
+
+.fuego:nth-child(5) {
+  -webkit-animation: fuego 0.2s infinite;
+  animation: fuego 0.2s infinite;
+}
+
+@-webkit-keyframes fuego {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+}
+
+50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(-120px) scale(0);
+    transform: translateY(-120px) scale(0);
+}
+}
+@keyframes fuego {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+}
+
+50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(-120px) scale(0);
+    transform: translateY(-120px) scale(0);
+}
+}
+
+.third .logo{
+	animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955)
+}
+@-webkit-keyframes lighthouse {
+  0% {
+    -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
+    -moz-transform: translate3d(15%,0,0) rotateZ(10deg);
+    transform: translate3d(15%,0,0) rotateZ(10deg);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    -moz-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    transform: translate3d(-15%,0,0) rotateZ(-10deg);
+  }
+}
+
+@-moz-keyframes lighthouse {
+  0% {
+    -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
+    -moz-transform: translate3d(15%,0,0) rotateZ(10deg);
+    transform: translate3d(15%,0,0) rotateZ(10deg);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    -moz-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    transform: translate3d(-15%,0,0) rotateZ(-10deg);
+  }
+}
+
+@-ms-keyframes lighthouse {
+  0% {
+    -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
+    -moz-transform: translate3d(15%,0,0) rotateZ(10deg);
+    transform: translate3d(15%,0,0) rotateZ(10deg);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    -moz-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    transform: translate3d(-15%,0,0) rotateZ(-10deg);
+  }
+}
+
+@keyframes lighthouse {
+  0% {
+    -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
+    -moz-transform: translate3d(15%,0,0) rotateZ(10deg);
+    transform: translate3d(15%,0,0) rotateZ(10deg);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    -moz-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    transform: translate3d(-15%,0,0) rotateZ(-10deg);
+  }
+}
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="section first">
+	<div class="halfwidth">
+		<h3>第一屏</h3>
+		<p>fullPage.js — 基本演示</p>
+	</div>
+	<div class="halfwidth logo">
+		<img src="img/a1.png" alt="" class="animated fadeInDown">
+		<img src="img/a2.png" class="animated rollIn" >
+		<img src="img/a3.png"class="animated rotateIn">
+		<img src="img/a4.png"class="animated fadeInRight">
+	</div>
+</div>
+
+<div class="section">
+	<div class="halfwidth">
+		<h3>第er屏</h3>
+		<p>基本演示</p>
+	</div>
+	<div class="velas">
+		<div class="fuego"></div>
+		<div class="fuego"></div>
+		<div class="fuego"></div>
+		<div class="fuego"></div>
+		<div class="fuego"></div>
+	</div>
+	<div class="halfwidth logo">
+		<img src="img/a1.png" alt="" class="animated slideInDown">
+		<img src="img/a2.png" class="animated rollIn" >
+		<img src="img/a3.png"class="animated rotateIn">
+		<img src="img/a4.png"class="animated fadeInRight">
+	</div>
+</div>
+
+<div class="section third">
+	<div class="halfwidth">
+		<h3>第san屏</h3>
+		<p> 基本演示</p>
+	</div>
+	<div class="halfwidth logo">
+
+		<img src="img/a1.png" alt="" class="animated ">
+		<img src="img/a2.png" class="animated " >
+		<img src="img/a3.png"class="animated ">
+		<img src="img/a4.png"class="animated ">
+	</div>
+</div>
+
+
+</body>
+
+
+
+
 </html>

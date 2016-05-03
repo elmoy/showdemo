@@ -1,0 +1,187 @@
+
+
+<html>
+<head>
+    <title>HTML5 Canvas Fire Demo</title>
+    <link rel="stylesheet" type="text/css" href="css/animation.css"> 
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.css"></script>
+    <style type="text/css">
+
+        .velas {
+          background: #ffffff;
+          border-radius: 10px;
+          position: absolute;
+          top: 528px;
+          left: 50%;
+          margin-left: -2.5px;
+          margin-top: -8.33333333px;
+          width: 5px;
+          height: 35px;
+          -webkit-transform: translateY(-300px);
+          -ms-transform: translateY(-300px);
+          transform: translateY(-300px);
+          -webkit-backface-visibility: hidden;
+          -ms-backface-visibility: hidden;
+          backface-visibility: hidden;
+          -webkit-animation: in 500ms 6s ease-out forwards;
+          animation: in 500ms 6s ease-out forwards;
+      }
+
+/*.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.22222222px;
+}*/
+
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+.fuego {
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -2.2px;
+  width: 6.66666667px;
+  height: 18px;
+}
+
+.fuego:nth-child(1) {
+  -webkit-animation: fuego 2s 6.5s infinite;
+  animation: fuego 2s 6.5s infinite;
+}
+
+.fuego:nth-child(2) {
+  -webkit-animation: fuego 1.5s 6.5s infinite;
+  animation: fuego 1.5s 6.5s infinite;
+}
+
+.fuego:nth-child(3) {
+  -webkit-animation: fuego 1s 6.5s infinite;
+  animation: fuego 1s 6.5s infinite;
+}
+
+.fuego:nth-child(4) {
+  -webkit-animation: fuego 0.5s 6.5s infinite;
+  animation: fuego 0.5s 6.5s infinite;
+}
+
+.fuego:nth-child(5) {
+  -webkit-animation: fuego 0.2s 6.5s infinite;
+  animation: fuego 0.2s 6.5s infinite;
+}
+
+@-webkit-keyframes fuego {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+}
+
+50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(-20px) scale(0);
+    transform: translateY(-20px) scale(0);
+}
+}
+@keyframes fuego {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+}
+
+50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(-20px) scale(0);
+    transform: translateY(-20px) scale(0);
+}
+}
+
+.logo{
+  position: relative;
+  width: 370px;  /*0.6166666666666667*/
+  height: 600px;
+}
+.logo img{
+  position: absolute;
+
+}
+.logo img:nth-child(1){
+  width: 100%;
+  top: 0;
+  left:0;
+  /*animation: move_top 5s ease;*/
+}
+/*@keyframes move_top{
+  0%{top:-100px;left:-100px;}
+  50%{top:0;left: -80px;}
+  80%{top: 0;left: 0;-webkit-transform: scaleZ(5) rotateX(45deg);}
+  100%{}
+}*/
+.logo img:nth-child(2){
+  width: 60%;
+  bottom: 0;
+  left:0;
+}
+.logo img:nth-child(3){
+  width: 36%;
+  bottom: 0;
+  right: 0;
+}
+.logo img:nth-child(4){
+  width: 21.6%;
+  bottom: 21.6%;
+  right: 0;
+}
+
+</style>
+
+</head>
+<body>
+   <!--  <div id="content" class="animated flash">        
+        <canvas id="canvas" width="200" height="200"></canvas>
+    </div> -->
+    <div class="velas">
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+  </div>
+  <div class="logo">
+      <img src="a1.png" alt="" class="animated slideInDown">
+      <img src="a2.png" class="animated rollIn" >
+      <img src="a3.png"class="animated rotateIn">
+      <img src="a4.png"class="animated fadeInRight">
+  </div>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $.fn.fullpage({
+        slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+        anchors: ['page1', 'page2', 'page3', 'page4']
+    });
+  });
+
+
+</script>
