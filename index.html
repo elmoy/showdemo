@@ -53,6 +53,7 @@ $(document).ready(function() {
 	/*float: left;*/
   margin: 0 auto;
 	position: relative;
+  vertical-align: bottom;
 }
 .lunbo img{
   width: 100% !important;
@@ -94,8 +95,17 @@ $(document).ready(function() {
   width: 21.6%;
   bottom: 23.6%;
   right: 0;
+  animation:  myrotate 5s ease infinite;
 }
-
+.active .logo img:nth-child(4){
+  animation: fadeInRight 1s ease ;
+}
+@keyframes myrotate {
+  0%{transform: rotateY(0deg);}
+  50%{transform: rotateY(180deg);}
+  100%{transform: rotateY(0deg);}
+}
+@-webkit-keyframes fadeInRight{0%{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
 /*fire*/
 
 .velas {
@@ -266,7 +276,15 @@ $(document).ready(function() {
     transform: translate3d(-15%,0,0) rotateZ(-10deg);
   }
 }
-
+.second .logo{
+  z-index: 1;
+}
+#surface{
+  position: absolute;
+  top: -50%;
+  left: 0;
+  z-index: 0;
+}
 </style>
 
 
@@ -288,12 +306,12 @@ $(document).ready(function() {
   		<img src="img/a1.png" alt="" class="animated fadeInDown">
   		<img src="img/a2.png" class="animated rollIn" >
   		<img src="img/a3.png"class="animated rotateIn">
-  		<img src="img/a4.png"class="animated fadeInRight">
+  		<img src="img/a4.png"class="animated ">
    </div>
   </div>
 </div>
 
-<div class="section">
+<div class="section second">
 	<div class="halfwidth">
 		<h3>第er屏</h3>
 		<p>基本演示</p>
@@ -307,7 +325,7 @@ $(document).ready(function() {
   </div> -->
   <div class="halfwidth">
   <div class="logo">
-    <svg class="first" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   <!--  <svg class="first" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
     width="100%" height="100%" viewBox="0 0 180.36 336.86" enable-background="new 0 0 180.36 336.86" xml:space="preserve">
           <path class="outer-flame" fill="url(#largeGradient)" stroke="url(#largeGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
           M82.579,210.049c-4.315-0.393-8.678-1.158-12.676-2.352c-19.553-5.839-36.385-22.93-40.572-43.069
@@ -335,18 +353,19 @@ $(document).ready(function() {
           <animate attributeName="fy" dur="700ms" from="90%" to="0%" repeatCount="indefinite" />
         </radialGradient>
       </defs>
-    </svg>
+    </svg> -->
   <!--   <div class="first lunbo">
       <img src="img/f1.png">
       <img src="img/f2.png">
       <img src="img/f3.png">
       <img src="img/f4.png">
     </div> -->
-		<!-- <img src="img/a1.png" alt="" class="animated slideInDown"> -->
+		<img src="img/a1.png" alt="" class="animated slideInDown">
 		<img src="img/a2.png" class="animated rollIn" >
 		<img src="img/a3.png"class="animated rotateIn">
 		<img src="img/a4.png"class="animated fadeInRight">
-	</div>
+  </div>
+    <canvas id="surface"></canvas>
   </div>
 </div>
 
@@ -365,6 +384,7 @@ $(document).ready(function() {
   <canvas id="canvas" style="position:absolute;top:0px;left:0px;z-index:1;"></canvas>
   </div>
 </div>
+<script type="text/javascript" src="js/fire.js"></script>
 
   <script type="text/javascript">
     $(function(){

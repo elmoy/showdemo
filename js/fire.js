@@ -1,44 +1,3 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>demo</title>
-  <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-    <meta name="apple-mobile-web-app-title" content=""/>
-  <meta name="apple-touch-fullscreen" content="YES" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="HandheldFriendly" content="true" />
-  <meta http-equiv="x-rim-auto-match" content="none" />
-  <meta name="format-detection" content="telephone=no" />
-  <!-- This is to force IE into the latest version mode, overriding 'compatibility' mode which breaks everything. -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<script src="js/jquery.min.js"></script>
-  <!--feature-->
-  <style type="text/css">
-  body{
-  background:#000;
-}
-
-.wrapper {
-  margin: 20px auto;
-  text-align: center;
-}
-canvas {
-  width: 100%;
-  height: 100%;
-}
-  </style>
-</head>
-<body>
-  <section class="doc doc--bg2">
-  
-    <canvas id="surface"></canvas>
-
-  </section>
-  <script type="text/javascript">
    $( document ).ready(function() {
   
   // Set canvas drawing surface
@@ -55,7 +14,7 @@ canvas {
   var time = 0;
   // Set wrapper and canvas items size
   var canvasWidth=100 + '%';
-  var canvasHeight=100 + '%';
+  var canvasHeight=150 + '%';
   $(".wrapper").css({width:canvasWidth,height:canvasHeight});
   $("#surface").css({width:canvasWidth,height:canvasHeight});
 
@@ -74,21 +33,21 @@ canvas {
     this.speed = {x: -1+Math.random()*2, y: -5+Math.random()*5};
      canvasWidth = (document.getElementById("surface").width);
      canvasHeight= (document.getElementById("surface").height);
-     this.location = {x: canvasWidth/2, y: (canvasHeight/2)+35};
+     this.location = {x: canvasWidth/2+10, y: (canvasHeight/2)+45};
 
-    this.radius = .5+Math.random()*15;
+    this.radius = .5+Math.random()*35;
 
     this.life = 10+Math.random()*10;
     this.death = this.life;
 
     this.r = 255;
-    this.g = Math.round(Math.random()*155);
+    this.g = Math.round(Math.random()*85);
     this.b = 0;
   }
   
   function ParticleAnimation(){
     surface.globalCompositeOperation = "source-over";
-    surface.fillStyle = "#fff";
+    surface.fillStyle = "#4BBFC3";
     surface.fillRect(0, 0, canvasWidth, canvasHeight);
     // surface.globalCompositeOperation = "lighter";
     
@@ -99,7 +58,7 @@ canvas {
       surface.beginPath();
 
       p.opacity = Math.round(p.death/p.life*100)/100
-      var gradient = surface.createRadialGradient(p.location.x, p.location.y, 0, p.location.x, p.location.y, p.radius);
+      var gradient = surface.createRadialGradient(p.location.x, p.location.y, 0, p.location.x+5, p.location.y, p.radius);
       gradient.addColorStop(0, "rgba("+p.r+", "+p.g+", "+p.b+", "+p.opacity+")");
       gradient.addColorStop(0.5, "rgba("+p.r+", "+p.g+", "+p.b+", "+p.opacity+")");
       gradient.addColorStop(1, "rgba("+p.r+", "+p.g+", "+p.b+", 0)");
@@ -136,6 +95,3 @@ canvas {
 ParticleAnimation();
 
 });
-  </script>
-</body>
-</html>
