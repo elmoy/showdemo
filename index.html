@@ -1,439 +1,114 @@
 
 <!DOCTYPE html>
-
 <html lang="zh-CN">
-
 <head>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
-<title>Showdemo </title>
-
-<link rel="stylesheet" href="js/jquery.fullPage.css">
-<script src="js/jquery.min.js"></script>
-
-<script src="js/jquery-ui-1.10.3.min.js"></script>
-
-<script src="js/jquery.fullPage.min.js"></script>
-<script>
-
-$(document).ready(function() {
-
-	$.fn.fullpage({
-
-		slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
-
-		anchors: ['page1', 'page2', 'page3']
-
-	});
-
-  var cwidth = $(document).width()/(740*3);
-  $('.logo').width(370 * cwidth + 'px').height(600 * cwidth + 'px');
-  // var i = 0;
-  // var fire = setInterval(function(){
-  //   var that = i;
-  //   i++;
-  //   $('.lunbo img').eq(that).fadeOut();
-  //     $('.lunbo img').eq(i).fadeIn();
-  //   if(i > 3){
-  //     i = 0;
-  //   }
-  // },300);
-});
-
-</script>
-<link rel="stylesheet" type="text/css" href="css/animation.css">
-<style>
-
-.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff; overflow: hidden;}
-.halfwidth{
-  display: inline-block;
-	width: 49%;
-  /*min-width: 375px;*/
-	/*float: left;*/
-  margin: 0 auto;
-	position: relative;
-  vertical-align: bottom;
-}
-.lunbo img{
-  width: 100% !important;
-  height: 100%;
-}
-.logo{
-  position: relative;
-  width: 30%;  /*0.6166666666666667    // 370*/ 
-  height: 61.48648648648646%;
-  margin: 0 auto;
-}
-.logo img{
-  position: absolute;
-
-}
-.logo img:nth-child(1),.logo .first{
-  width: 100%;
-  top: 0;
-  left:0;
-  /*animation: move_top 5s ease;*/
-}
-/*@keyframes move_top{
-  0%{top:-100px;left:-100px;}
-  50%{top:0;left: -80px;}
-  80%{top: 0;left: 0;-webkit-transform: scaleZ(5) rotateX(45deg);}
-  100%{}
-}*/
-.logo img:nth-child(2){
-  width: 61%;
-  bottom: 0;
-  left:0;
-}
-.logo img:nth-child(3){
-  width: 37%;
-  bottom: 0;
-  right: 0;
-}
-.logo img:nth-child(4){
-  width: 21.6%;
-  bottom: 23.6%;
-  right: 0;
-  animation:  myrotate 5s ease infinite;
-}
-.active .logo img:nth-child(4){
-  animation: fadeInRight 1s ease ;
-}
-@keyframes myrotate {
-  0%{transform: rotateY(0deg);}
-  50%{transform: rotateY(180deg);}
-  100%{transform: rotateY(0deg);}
-}
-@-webkit-keyframes fadeInRight{0%{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
-/*fire*/
-
-.velas {
-	/*background: #ffffff;*/
-	border-radius: 10px;
-	position: absolute;
-	top: 360px;
-	left: 81%;
-	/*margin-left: -2.5px;*/
-	/*margin-top: -8.33333333px;*/
-	width: 5px;
-	height: 35px;
-	/*-webkit-transform: translateY(-300px);
-	-ms-transform: translateY(-300px);
-	transform: translateY(-300px);*/
-	-webkit-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-webkit-animation: in 500ms ease-out forwards;
-	animation: in 500ms ease-out forwards;
-}
-
-/*.velas:after,
-.velas:before {
-  background: rgba(255, 0, 0, 0.4);
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2.22222222px;
-}*/
-
-.velas:after {
-  top: 25%;
-  left: 0;
-}
-
-.velas:before {
-  top: 45%;
-  left: 0;
-}
-.fuego {
-  border-radius: 100%;
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  margin-left: -2.2px;
-  width: 36.66666667px;
-  height: 118px;
-  z-index: 99;
-}
-
-.fuego:nth-child(1) {
-  -webkit-animation: fuego 2s infinite;
-  animation: fuego 2s infinite;
-}
-
-.fuego:nth-child(2) {
-  -webkit-animation: fuego 1.5s infinite;
-  animation: fuego 1.5s infinite;
-}
-
-.fuego:nth-child(3) {
-  -webkit-animation: fuego 1s infinite;
-  animation: fuego 1s infinite;
-}
-
-.fuego:nth-child(4) {
-  -webkit-animation: fuego 0.5s infinite;
-  animation: fuego 0.5s infinite;
-}
-
-.fuego:nth-child(5) {
-  -webkit-animation: fuego 0.2s infinite;
-  animation: fuego 0.2s infinite;
-}
-
-@-webkit-keyframes fuego {
-  0%, 100% {
-    background: rgba(254, 248, 97, 0.5);
-    -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
-    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
-    -webkit-transform: translateY(0) scale(1);
-    transform: translateY(0) scale(1);
-}
-
-50% {
-    background: rgba(255, 50, 0, 0.1);
-    -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
-    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
-    -webkit-transform: translateY(-120px) scale(0);
-    transform: translateY(-120px) scale(0);
-}
-}
-@keyframes fuego {
-  0%, 100% {
-    background: rgba(254, 248, 97, 0.5);
-    -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
-    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
-    -webkit-transform: translateY(0) scale(1);
-    transform: translateY(0) scale(1);
-}
-
-50% {
-    background: rgba(255, 50, 0, 0.1);
-    -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
-    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
-    -webkit-transform: translateY(-120px) scale(0);
-    transform: translateY(-120px) scale(0);
-}
-}
-
-.third .logo{
-  bottom: 85px;
-	animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955)
-}
-@-webkit-keyframes lighthouse {
-  0% {
-    -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
-    -moz-transform: translate3d(15%,0,0) rotateZ(10deg);
-    transform: translate3d(15%,0,0) rotateZ(10deg);
-  }
-
-  100% {
-    -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
-    -moz-transform: translate3d(-15%,0,0) rotateZ(-10deg);
-    transform: translate3d(-15%,0,0) rotateZ(-10deg);
-  }
-}
-
-@-moz-keyframes lighthouse {
-  0% {
-    -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
-    -moz-transform: translate3d(15%,0,0) rotateZ(10deg);
-    transform: translate3d(15%,0,0) rotateZ(10deg);
-  }
-
-  100% {
-    -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
-    -moz-transform: translate3d(-15%,0,0) rotateZ(-10deg);
-    transform: translate3d(-15%,0,0) rotateZ(-10deg);
-  }
-}
-
-@-ms-keyframes lighthouse {
-  0% {
-    -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
-    -moz-transform: translate3d(15%,0,0) rotateZ(10deg);
-    transform: translate3d(15%,0,0) rotateZ(10deg);
-  }
-
-  100% {
-    -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
-    -moz-transform: translate3d(-15%,0,0) rotateZ(-10deg);
-    transform: translate3d(-15%,0,0) rotateZ(-10deg);
-  }
-}
-
-@keyframes lighthouse {
-  0% {
-    -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
-    -moz-transform: translate3d(15%,0,0) rotateZ(10deg);
-    transform: translate3d(15%,0,0) rotateZ(10deg);
-  }
-
-  100% {
-    -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
-    -moz-transform: translate3d(-15%,0,0) rotateZ(-10deg);
-    transform: translate3d(-15%,0,0) rotateZ(-10deg);
-  }
-}
-.second .logo{
-  z-index: 1;
-}
-#surface{
-  position: absolute;
-  top: -50%;
-  left: 0;
-  z-index: 0;
-}
-</style>
-
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>Showdemo </title>
+    <link rel="stylesheet" href="js/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.fn.fullpage({
+                slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
+                anchors: ['page1', 'page2', 'page3']
+            });
+            var cwidth = $(document).width()/(740*3);
+            $('.logo').width(370 * cwidth + 'px').height(600 * cwidth + 'px');
+        });
+    </script>
 </head>
-
-
-
 <body>
-
-
-
-<div class="section first">
-	<div class="halfwidth">
-		<h3>第一屏</h3>
-		<p>fullPage.js — 基本演示</p>
-	</div>
-	<div class="halfwidth">
-    <div class="logo">
-  		<img src="img/a1.png" alt="" class="animated fadeInDown">
-  		<img src="img/a2.png" class="animated rollIn" >
-  		<img src="img/a3.png"class="animated rotateIn">
-  		<img src="img/a4.png"class="animated ">
-   </div>
-  </div>
-</div>
-
-<div class="section second">
-	<div class="halfwidth">
-		<h3>第er屏</h3>
-		<p>基本演示</p>
-	</div>
-  <!-- <div class="velas">
-    <div class="fuego"></div>
-    <div class="fuego"></div>
-    <div class="fuego"></div>
-    <div class="fuego"></div>
-    <div class="fuego"></div>
-  </div> -->
-  <div class="halfwidth">
-  <div class="logo">
-   <!--  <svg class="first" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    width="100%" height="100%" viewBox="0 0 180.36 336.86" enable-background="new 0 0 180.36 336.86" xml:space="preserve">
-          <path class="outer-flame" fill="url(#largeGradient)" stroke="url(#largeGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-          M82.579,210.049c-4.315-0.393-8.678-1.158-12.676-2.352c-19.553-5.839-36.385-22.93-40.572-43.069
-          c-1.102-5.301-1.471-11.261-0.887-16.656c1.646-15.209,8.889-31.008,16.749-43.975C55.992,86.183,67.031,68.265,74.26,48.634
-          c2.079-5.647,3.825-11.421,5.117-17.299c2.019-9.181,3.897-21.151-3.384-28.647c14.729,15.163,27.537,32.13,38.675,50.078
-          c4.029,6.492,7.841,13.117,11.454,19.849c3.744,6.976,7.259,14.075,10.524,21.288c4.38,9.678,7.966,19.728,10.488,30.052
-          c4.66,19.078,9.751,43.266-2.968,60.391c-5.683,7.652-12.951,13.902-21.589,17.991c-10.308,4.879-22.085,8.124-33.541,8.032
-          C86.931,210.352,84.761,210.248,82.579,210.049z">
-        </path>
-        <path class="inner-flame" fill="url(#smallGradient)" stroke="url(#smallGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-        M90.043,116.799c-4.024,9.712-12.607,17.546-17.863,26.662c-5.921,10.268-11.892,23.039-9.362,35.209
-        1.865,8.974,9.366,16.589,18.078,19.191c1.782,0.532,3.726,0.873,5.648,1.048c0.972,0.089,1.939,0.135,2.877,0.143
-        c5.104,0.041,10.352-1.405,14.945-3.579c3.849-1.822,7.087-4.607,9.62-8.017c7.656-10.307,3.202-24.177-1.21-34.838
-        c-6.142-14.841-15.085-28.459-22.297-42.793C91.464,111.781,91.118,114.204,90.043,116.799z">
-      </path>
-      <defs>
-        <radialGradient id="smallGradient" fy="90%">
-          <stop offset="0%" stop-color="#f4c708"></stop>
-          <stop offset="100%" stop-color="#f7e69a"></stop>
-          <animate attributeName="fy" dur="700ms" from="90%" to="0%" repeatCount="indefinite" />
-        </radialGradient>
-        <radialGradient id="largeGradient" fy="90%">
-          <stop offset="0%" stop-color="#ff8806"></stop>
-          <stop offset="100%" stop-color="#d9574a"></stop>
-          <animate attributeName="fy" dur="700ms" from="90%" to="0%" repeatCount="indefinite" />
-        </radialGradient>
-      </defs>
-    </svg> -->
-  <!--   <div class="first lunbo">
-      <img src="img/f1.png">
-      <img src="img/f2.png">
-      <img src="img/f3.png">
-      <img src="img/f4.png">
-    </div> -->
-		<img src="img/a1.png" alt="" class="animated slideInDown">
-		<img src="img/a2.png" class="animated rollIn" >
-		<img src="img/a3.png"class="animated rotateIn">
-		<img src="img/a4.png"class="animated fadeInRight">
-  </div>
-    <canvas id="surface"></canvas>
-  </div>
-</div>
-
-<div class="section third">
-  <div class="halfwidth">
-    <h3>第san屏</h3>
-    <p> 基本演示</p>
-  </div>
-  <div class="halfwidth ">
-    <div class="logo">
-      <img src="img/a1.png" alt="" class="animated ">
-      <img src="img/a2.png" class="animated " >
-      <img src="img/a3.png"class="animated ">
-      <img src="img/a4.png"class="animated ">
+    <div class="section first">
+        <div class="halfwidth">
+            <h3>第一屏</h3>
+            <p>fullPage.js — 基本演示</p>
+        </div>
+        <div class="halfwidth">
+            <div class="logo">
+                <img src="img/a1.png" alt="" class="">
+                <img src="img/a2.png" class="" >
+                <img src="img/a3.png"class="">
+                <img src="img/a4.png"class="">
+            </div>
+        </div>
     </div>
-  <canvas id="canvas" style="position:absolute;top:0px;left:0px;z-index:1;"></canvas>
-  </div>
-</div>
-<script type="text/javascript" src="js/fire.js"></script>
-
-  <script type="text/javascript">
-    $(function(){
-    var canvas = document.getElementById('canvas');  
-    var ctx = canvas.getContext('2d');  
-    canvas.width = canvas.parentNode.clientWidth;  
-    canvas.height = canvas.parentNode.clientHeight;
-    console.log(canvas.height);
-
-
-    //如果浏览器支持requestAnimFrame则使用requestAnimFrame否则使用setTimeout  
-    window.requestAnimFrame = (function(){  
-    return  window.requestAnimationFrame       ||  
-            window.webkitRequestAnimationFrame ||  
-            window.mozRequestAnimationFrame    ||  
-            function( callback ){  
-              window.setTimeout(callback, 1000 / 60);  
-            };  
-    })();  
-    //初始角度为0  
-    var step = 0;  
-    //定义三条不同波浪的颜色  
-    var lines = ["rgba(0,222,255, 0.2)",  
-                   "rgba(157,192,249, 0.2)",  
-                   "rgba(0,168,255, 0.2)"];  
-    function loop(){  
-        ctx.clearRect(0,0,canvas.width,canvas.height);  
-        step++;  
-        //画3个不同颜色的矩形  
-        for(var j = lines.length - 1; j >= 0; j--) {  
-            ctx.fillStyle = lines[j];  
-            //每个矩形的角度都不同，每个之间相差45度  
-            var angle = (step+j*45)*Math.PI/180;  
-            var deltaHeight   = Math.sin(angle) * 50;  
-            var deltaHeightRight   = Math.cos(angle) * 50;  
-            ctx.beginPath();  
-            ctx.moveTo(0, canvas.height/1.8+deltaHeight);  
-            ctx.bezierCurveTo(canvas.width /1.8, canvas.height/1.8+deltaHeight-50, canvas.width / 1.8, canvas.height/1.8+deltaHeightRight-50, canvas.width, canvas.height/1.8+deltaHeightRight);  
-            ctx.lineTo(canvas.width, canvas.height);  
-            ctx.lineTo(0, canvas.height);  
-            ctx.lineTo(0, canvas.height/2+deltaHeight);  
-            ctx.closePath();  
-            ctx.fill();  
-        }  
-        requestAnimFrame(loop);  
-    }  
-      loop();
-    }); 
-  </script>
+    <div class="section second">
+        <div class="halfwidth">
+            <h3>第er屏</h3>
+            <p>基本演示</p>
+        </div>
+        <div class="halfwidth">
+            <div class="logo">
+                <img src="img/a1.png" alt="" class="">
+                <img src="img/a2.png" class="" >
+                <img src="img/a3.png"class="">
+                <img src="img/a4.png"class="">
+            </div>
+            <canvas id="surface"></canvas>
+        </div>
+    </div>
+    <div class="section third">
+        <div class="halfwidth">
+            <h3>第san屏</h3>
+            <p> 基本演示</p>
+        </div>
+        <div class="halfwidth ">
+            <div class="logo">
+                <img src="img/a1.png" alt="" class="">
+                <img src="img/a2.png" class="" >
+                <img src="img/a3.png"class="">
+                <img src="img/a4.png"class="">
+            </div>
+            <canvas id="canvas" style="position:absolute;top:0px;left:0px;z-index:1;"></canvas>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/fire.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var canvas = document.getElementById('canvas');  
+            var ctx = canvas.getContext('2d');  
+            canvas.width = canvas.parentNode.clientWidth;  
+            canvas.height = canvas.parentNode.clientHeight;
+            console.log(canvas.height);
+            window.requestAnimFrame = (function(){  
+                return  window.requestAnimationFrame       ||  
+                        window.webkitRequestAnimationFrame ||  
+                        window.mozRequestAnimationFrame    ||  
+                function( callback ){  
+                    window.setTimeout(callback, 1000 / 60);  
+                };  
+            })();  
+            var step = 0;      //初始角度为0
+            var lines = ["rgba(0,222,255, 0.2)",   //定义三条不同波浪的颜色 
+                        "rgba(157,192,249, 0.2)",  
+                        "rgba(0,168,255, 0.2)"];  
+            function loop(){  
+                ctx.clearRect(0,0,canvas.width,canvas.height);  
+                step++;  
+                for(var j = lines.length - 1; j >= 0; j--) {     //画3个不同颜色的矩形 
+                    ctx.fillStyle = lines[j];  
+                    var angle = (step+j*45)*Math.PI/180;  //每个矩形的角度都不同，每个之间相差45度 
+                    var deltaHeight   = Math.sin(angle) * 50;  
+                    var deltaHeightRight   = Math.cos(angle) * 50;  
+                    ctx.beginPath();  
+                    ctx.moveTo(0, canvas.height/1.8+deltaHeight);  
+                    ctx.bezierCurveTo(canvas.width /1.8, canvas.height/1.8+deltaHeight-50, canvas.width / 1.8, canvas.height/1.8+deltaHeightRight-50, canvas.width, canvas.height/1.8+deltaHeightRight);  
+                    ctx.lineTo(canvas.width, canvas.height);  
+                    ctx.lineTo(0, canvas.height);  
+                    ctx.lineTo(0, canvas.height/2+deltaHeight);  
+                    ctx.closePath();  
+                    ctx.fill();  
+                }  
+                requestAnimFrame(loop);  
+            }  
+            loop();
+        }); 
+</script>
 
 </body>
 
