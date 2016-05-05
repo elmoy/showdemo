@@ -1,4 +1,4 @@
-   $( document ).ready(function() {
+   $(function() {
   
   // Set canvas drawing surface
   var space = document.getElementById("surface");
@@ -14,7 +14,7 @@
   var time = 0;
   // Set wrapper and canvas items size
   var canvasWidth=100 + '%';
-  var canvasHeight=150 + '%';
+  var canvasHeight=100 + '%';
   $(".wrapper").css({width:canvasWidth,height:canvasHeight});
   $("#surface").css({width:canvasWidth,height:canvasHeight});
 
@@ -41,13 +41,15 @@
     this.death = this.life;
 
     this.r = 255;
-    this.g = Math.round(Math.random()*85);
+    this.g = Math.round(Math.random()*155);
     this.b = 0;
   }
   
   function ParticleAnimation(){
-    surface.globalCompositeOperation = "source-over";
-    surface.fillStyle = "#4BBFC3";
+    // surface.globalCompositeOperation = "source-over";
+    // surface.fillStyle = "#4BBFC3";
+
+  
     surface.fillRect(0, 0, canvasWidth, canvasHeight);
     // surface.globalCompositeOperation = "lighter";
     
@@ -71,7 +73,22 @@
 // surface.lineTo(100,100);
 
 // surface.closePath();
-
+  var img1 = new Image();
+  var img2 = new Image();
+  var img3 = new Image();
+  var img4 = new Image();
+  img1.src = 'img/a1.png';
+  img2.src = 'img/a2.png';
+  img3.src = 'img/a3.png';
+  img4.src = 'img/a4.png';
+    img1.onload = function(){
+      var swidth = $('.second .logo').width();
+      // console.log(swidth)
+      surface.drawImage(img1,canvasWidth/3,0, canvasWidth/3,canvasWidth/3);
+      surface.drawImage(img2,canvasWidth/3,canvasHeight-canvasWidth/6, canvasWidth/5,canvasWidth/6);
+      surface.drawImage(img3,canvasWidth/1.85,canvasHeight-canvasWidth/9, canvasWidth/9,canvasWidth/9);
+      surface.drawImage(img4,canvasWidth/1.7,canvasHeight-canvasWidth/6, canvasWidth/18,canvasWidth/18);
+    }
       surface.arc(p.location.x, p.location.y, p.radius, Math.PI*2, false);
       surface.fill();
       p.death--;
