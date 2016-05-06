@@ -1,12 +1,21 @@
 
+h3,p{margin: 0}
+h3{
+  font-size: 16px;
+}
+p{
+  font-size: 14px;
+}
 .section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff; overflow: hidden;}
 .halfwidth{
   display: inline-block;
-	width: 49%;
+	width: 48%;
   margin: 0 auto;
+  /*padding: 30% 0;*/
 	position: relative;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
+
 /*.lunbo img{
   width: 100% !important;
   height: 100%;
@@ -21,8 +30,9 @@
   position: absolute;
 
 }
-.logo img:nth-child(1),.logo .first{
+.logo > img:nth-child(1),.logo .first{
   width: 100%;
+  padding-bottom: 100%;
   top: 0;
   left:0;
   /*animation: move_top 5s ease;*/
@@ -33,35 +43,35 @@
   80%{top: 0;left: 0;-webkit-transform: scaleZ(5) rotateX(45deg);}
   100%{}
 }*/
-.logo img:nth-child(2){
+.logo > img:nth-child(2){
   width: 61%;
   bottom: 0;
   left:0;
 }
-.logo img:nth-child(3){
+.logo > img:nth-child(3){
   width: 37%;
   bottom: 0;
   right: 0;
 }
-.logo img:nth-child(4){
+.logo > img:nth-child(4){
   width: 21.6%;
   bottom: 23.6%;
   right: 0;
 }
 /*first*/
-.first.active .logo img:nth-child(1){
+.first.active .logo > img:nth-child(1){
   animation: fadeInDown 3s ease-in-out;
 }
-.first.active .logo img:nth-child(2){
+.first.active .logo > img:nth-child(2){
   animation: rollIn 3s ease-in-out;
 }
-.first.active .logo img:nth-child(3){
+.first.active .logo > img:nth-child(3){
   animation: rotateIn 3s ease-in-out;
 }
-.first.active .logo img:nth-child(4){
+.first.active .logo > img:nth-child(4){
   animation: fadeInRight 3s ease-in-out;
 }
-.first.active .logo img.rotate{
+.first.active .logo > img.rotate{
   animation:  myrotate 3s ease infinite;
 }
 @-webkit-keyframes myrotate {
@@ -78,26 +88,67 @@
 .second .logo{
   z-index: 1;
 }
-#surface{
+.second .logo .first img{
+  height: 60%;
+  position: absolute;
+  top: 0;
+}
+.second .logo .first img:nth-child(1){
+  left:0;
+  animation: fire 3s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955)
+}
+.second .logo .first img:nth-child(2){
+  left:12.5%;
+  animation: fire 3s 0.4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.second .logo .first img:nth-child(3){
+  left:24%;
+  animation: fire 3s 0.8s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.second .logo .first img:nth-child(4){
+  left:35%;
+  animation: fire 3s 1.2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.second .logo .first img:nth-child(5){
+  left:48%;
+  animation: fire 3s 1.6s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.second .logo .first img:nth-child(6){
+  left:60%;
+  animation: fire 3s 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.second .logo .first img:nth-child(7){
+  left:72.5%;
+  animation: fire 3s 2.4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.second .logo .first img:nth-child(8){
+  left:84.5%;
+  animation: fire 3s 2.8s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+@keyframes fire{
+  0%{top:1%;}
+  100%{top:-4%;}
+}
+/*#surface{
   position: absolute;
   top: 0%;
   left: 0;
   z-index: 0;
-}
-.second.active .logo img:nth-child(1){
+}*/
+.second.active .logo > img:nth-child(1){
   animation: fireUp 3s ease-in-out;
 }
-.second.active .logo img:nth-child(2){
+.second.active .logo > img:nth-child(2){
   animation: fireLeft 3s ease-in-out;
   animation-fill-mode: both;
   -webkit-animation-fill-mode:both;
 }
-.second.active .logo img:nth-child(3){
+.second.active .logo > img:nth-child(3){
   animation: fireBottom 3s ease-in-out;
    animation-fill-mode: both;
   -webkit-animation-fill-mode:both;
 }
-.second.active .logo img:nth-child(4){
+.second.active .logo > img:nth-child(4){
   animation: fireRight 3s ease-in-out;
    animation-fill-mode: both;
   -webkit-animation-fill-mode:both;
@@ -117,7 +168,7 @@
 /*third*/
 .third .logo{
   bottom: 85px;
-	animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955)
+	animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 @-webkit-keyframes lighthouse {
   0% {
@@ -172,5 +223,27 @@
     -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
     -moz-transform: translate3d(-15%,0,0) rotateZ(-10deg);
     transform: translate3d(-15%,0,0) rotateZ(-10deg);
+  }
+}
+
+/*phone*/
+@media (max-width: 600px) {
+    .halfwidth{
+    display: inline-block;
+    width: 80%;
+    margin: 0 auto;
+    /*padding: 30% 0;*/
+  }
+  .halfwidth:first-child{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-25%);
+  }
+  .halfwidth:last-child{
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translate(-50%,25%);
   }
 }
