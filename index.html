@@ -15,11 +15,15 @@
     <script>
         $(document).ready(function() {
             $.fn.fullpage({
-                slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
+                // slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
                 anchors: ['page1', 'page2', 'page3']
             });
-            var cwidth = $(document).width()/(740*3);
-            $('.logo').width(370 * cwidth + 'px').height(600 * cwidth + 'px');
+            if($(document).width() > 600){
+                var cwidth = $(document).width()/(740*3);
+            }else{
+                var cwidth = $(document).width()/(740*1.5);
+            }
+                $('.logo').width(370 * cwidth + 'px').height(600 * cwidth + 'px');
         });
     </script>
 </head>
@@ -75,10 +79,10 @@
                 <img src="img/a3.png"class="">
                 <img src="img/a4.png"class="">
             </div>
-            <canvas id="canvas" style="position:absolute;top:0px;left:0px;z-index:1;"></canvas>
+            <!-- <canvas id="canvas" style="position:absolute;top:0px;left:0px;z-index:1;"></canvas> -->
         </div>
     </div>
     <!-- <script type="text/javascript" src="js/fire.js"></script> -->
-    <script type="text/javascript" src="js/bolang.js"></script>
+    <!-- <script type="text/javascript" src="js/bolang.js"></script> -->
 </body>
 </html>

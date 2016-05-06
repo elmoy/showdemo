@@ -6,7 +6,7 @@ h3{
 p{
   font-size: 14px;
 }
-.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff; overflow: hidden;}
+.section { text-align: center; font: 16px "Microsoft Yahei"; overflow: hidden;}
 .halfwidth{
   display: inline-block;
 	width: 48%;
@@ -61,18 +61,23 @@ p{
 /*first*/
 .first.active .logo > img:nth-child(1){
   animation: fadeInDown 3s ease-in-out;
+  -webkit-animation: fadeInDown 3s ease-in-out;
 }
 .first.active .logo > img:nth-child(2){
   animation: rollIn 3s ease-in-out;
+ -webkit-animation: rollIn 3s ease-in-out;
 }
 .first.active .logo > img:nth-child(3){
   animation: rotateIn 3s ease-in-out;
+  -webkit-animation: rotateIn 3s ease-in-out;
 }
 .first.active .logo > img:nth-child(4){
   animation: fadeInRight 3s ease-in-out;
+  -webkit-animation: fadeInRight 3s ease-in-out;
 }
 .first.active .logo > img.rotate{
   animation:  myrotate 3s ease infinite;
+  -webkit-animation:  myrotate 3s ease infinite;
 }
 @-webkit-keyframes myrotate {
   0%{-webkit-transform: rotateY(0deg);}
@@ -95,35 +100,43 @@ p{
 }
 .second .logo .first img:nth-child(1){
   left:0;
-  animation: fire 3s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955)
+  animation: fire 3s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation: fire 3s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .second .logo .first img:nth-child(2){
   left:12.5%;
   animation: fire 3s 0.4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+   -webkit-animation: fire 3s 0.4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .second .logo .first img:nth-child(3){
   left:24%;
   animation: fire 3s 0.8s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation: fire 3s 0.8s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .second .logo .first img:nth-child(4){
   left:35%;
   animation: fire 3s 1.2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation: fire 3s 1.2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .second .logo .first img:nth-child(5){
   left:48%;
   animation: fire 3s 1.6s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation: fire 3s 1.6s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .second .logo .first img:nth-child(6){
   left:60%;
   animation: fire 3s 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation: fire 3s 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .second .logo .first img:nth-child(7){
   left:72.5%;
   animation: fire 3s 2.4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation: fire 3s 2.4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .second .logo .first img:nth-child(8){
   left:84.5%;
   animation: fire 3s 2.8s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation: fire 3s 2.8s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 @keyframes fire{
   0%{top:1%;}
@@ -167,8 +180,9 @@ p{
 }
 /*third*/
 .third .logo{
-  bottom: 85px;
-	animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  /*bottom: 85px;*/
+  animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-webkit-animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 @-webkit-keyframes lighthouse {
   0% {
