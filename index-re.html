@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>Showdemo </title>
+    <link rel="stylesheet" href="js/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/style.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.fn.fullpage({
+                // slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
+                anchors: ['page1', 'page2', 'page3']
+            });
+            if($(document).width() > 600){
+                var cwidth = $(document).width()/(740*3);
+            }else{
+                var cwidth = $(document).width()/(740*1.5);
+            }
+                $('.logo').width(370 * cwidth + 'px').height(600 * cwidth + 'px');
+                $('.swiper').width(424 * cwidth + 'px').height(874 * cwidth + 'px');
+        });
+    </script>
+</head>
+<body>
+    <div class="section home">
+        <div class="h_box">
+            <div class="flex1">
+                <div class="home_content">
+                    <div class="home_logo">
+                        <img src="img/logo/logo_1.png">
+                        <img src="img/logo/logo_2.png">
+                        <img src="img/logo/logo_3.png">
+                        <img src="img/logo/logo_4.png">
+                    </div>
+                    <img src="img/slogan.png" class="code">
+                    <img src="img/code.jpg" class="code">
+                </div>
+            </div>
+            <div class="flex1">
+                <div class="swiper">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section first">
+        <div class="halfwidth">
+            <h3>第一屏</h3>
+            <p>基本演示</p>
+        </div>
+        <div class="halfwidth">
+            <div class="logo">
+                <img src="img/a1.png" alt="" class="">
+                <img src="img/a2.png" class="" >
+                <img src="img/a3.png"class="">
+                <img src="img/a4.png"class="">
+            </div>
+        </div>
+    </div>
+    <div class="section second">
+        <div class="halfwidth">
+            <h3>第er屏</h3>
+            <p>基本演示</p>
+        </div>
+        <div class="halfwidth">
+            <div class="logo">
+                <!-- <img src="img/a1.png" alt="" class="" > -->
+                <div class="first">
+                    <img src="img/a1/ca1_01.png" alt="" class="">
+                    <img src="img/a1/ca1_02.png" class="" >
+                    <img src="img/a1/ca1_03.png"class="">
+                    <img src="img/a1/ca1_04.png"class="">
+                    <img src="img/a1/ca1_05.png"class="">
+                    <img src="img/a1/ca1_06.png"class="">
+                    <img src="img/a1/ca1_07.png"class="">
+                    <img src="img/a1/ca1_08.png"class="">
+                </div>
+                <img src="img/a2.png" class="" >
+                <img src="img/a3.png"class="">
+                <img src="img/a4.png"class="">
+            </div>
+            <!-- <canvas id="surface"></canvas> -->
+        </div>
+    </div>
+    <div class="section third">
+        <div class="halfwidth">
+            <h3>第san屏</h3>
+            <p> 基本演示</p>
+        </div>
+        <div class="halfwidth ">
+            <div class="logo">
+                <img src="img/a1.png" alt="" class="">
+                <img src="img/a2.png" class="" >
+                <img src="img/a3.png"class="">
+                <img src="img/a4.png"class="">
+            </div>
+            <!-- <canvas id="canvas" style="position:absolute;top:0px;left:0px;z-index:1;"></canvas> -->
+        </div>
+    </div>
+    <!-- <script type="text/javascript" src="js/fire.js"></script> -->
+    <!-- <script type="text/javascript" src="js/bolang.js"></script> -->
+</body>
+</html>
